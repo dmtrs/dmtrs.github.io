@@ -312,7 +312,7 @@ a:hover, a:focus {
     padding: 0 48px; }
     .deck-container > .slide img.poster {
       padding-top: 1em;
-      max-height: 25em; }
+      max-height: 90%; }
     .deck-container > .slide code.hljs {
       background: none; }
   .deck-container h1 {
