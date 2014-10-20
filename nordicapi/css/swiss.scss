@@ -1,0 +1,152 @@
+@import "reset";
+@font-face {
+    font-family: 'Bree Serif';
+    src: url(fonts/bree.serif.woff) format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/** swiss **/
+/*$primary-color:         #000;*/
+/*$primary-back-color:    #fff;*/
+/*$secondary-color:       #c00;*/
+/*$secondary-light-color: #888;*/
+/*$middle-color:          #ccc;*/
+
+/** Light **/
+// $primary-color: #E62534;
+// $primary-back-color: #FFFFF3;
+// $secondary-color: #2B2828;
+// $secondary-light-color: #6B6E6C;
+// $middle-color: #16BECF;
+
+$primary-color: #E62534;
+$primary-back-color: #FFFFF3;
+$secondary-color: #2B2828;
+$secondary-light-color: #6B6E6C;
+$middle-color: #16BECF;
+
+h1 {
+  color:$primary-color;
+}
+
+h2 {
+  color:$secondary-color;
+  border-bottom-color:$middle-color;
+}
+
+h3 {
+  color:$secondary-light-color;
+}
+
+pre {
+  padding: 0em;  
+  border-color:$middle-color;
+  border: 0px;
+}
+
+code {
+  color:$secondary-light-color;
+}
+
+blockquote {
+  font-size:2em;
+  font-style:italic;
+  padding:1em 2em;
+  color:$primary-color;
+  border-left:5px solid $middle-color;
+
+  p {
+    margin:0;
+  }
+
+  cite {
+    font-size:.5em;
+    font-style:normal;
+    font-weight:bold;
+    color:$secondary-light-color;
+  }
+}
+
+::-moz-selection{ background:$secondary-color; color:$primary-back-color; }
+::selection { background:$secondary-color; color:$primary-back-color; }
+
+a {
+  &, &:hover, &:focus, &:active, &:visited {
+    color:$secondary-color;
+    text-decoration:none;
+  }
+
+  &:hover, &:focus {
+    text-decoration:underline;
+  }
+}
+
+.deck-container {
+  font-family: 'Bree Serif', serif;
+  font-weight: 400;
+  font-size: 1.25em;/* 1.75em; */
+  line-height: 1.1;
+  background:$primary-back-color;
+
+  > .slide {
+    padding:0 48px;
+
+        img.poster {
+            padding-top: 1em;
+            max-height:90%;
+        }
+        code.hljs {
+            background: none;
+        }
+  }
+  
+  h1 {
+      /* text-transform: uppercase; */
+  }
+}
+
+.slide {
+  .deck-before, .deck-previous {
+    opacity:0.4;
+
+    &:not(.deck-child-current) {
+      .deck-before, .deck-previous {
+        opacity:1;
+      }
+    }
+  }
+
+  .deck-child-current {
+    opacity:1;
+  }
+}
+
+.deck-prev-link, .deck-next-link {
+  background:$middle-color;
+  font-family:serif;
+
+  &, &:hover, &:focus, &:active, &:visited {
+    color:$primary-back-color;
+  }
+
+  &:hover, &:focus {
+    background:$secondary-color;
+    text-decoration:none;
+  }
+}
+
+.deck-status {
+  font-size:0.6666em;
+}
+
+.deck-menu {
+  .slide {
+    background:#eee;
+  }
+
+  .deck-current, .no-touch & .slide:hover {
+    background:#ddf;
+  }
+}
+
+.prepend-top { padding-top: 2em; }
+.uppercase   { text-transform: uppercase; }
