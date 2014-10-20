@@ -47,7 +47,7 @@
                 </div>
             </section>
             <section class="slide">
-            <quote class="vcenter" style="width: 50%; margin: 0 auto; font-size: 1.25em;">Hypermedia is a way for the server to tell the client what HTTP requests the client might want to make in the future.</quote>
+            <quote class="vcenter" style="width: 60%; margin: 0 auto; font-size: 1.25em;font-style: italic;"><i>"Hypermedia is a way for the server to tell the client what HTTP requests the client might want to make in the future."</i></quote>
             </section>
             <section class="slide">
                 <h1 class="uppercase">api</h1>
@@ -194,8 +194,6 @@
     <section class="slide">
         <h2>GET .../tracks?genre=twerk</h2>
 <pre><code class="json">{
-    "meta" : {
-    },
     "tracks" : [ {
         "id": 150424356,
         "title": "Trey Songz - Na Na (Kush Electricity Remix)",
@@ -208,7 +206,7 @@
             },
             "similar": {
                 "type": "tracks",
-                "href": ""
+                "href": ".../tracks/150424356/similar"
             }
             //...
         }
@@ -218,12 +216,12 @@
             <section class="slide">
                 <h2>GET .../users/55884576</h2>
 <pre><code class="json">{
-    "users": {
+    "users": [ {
         "id": 55884576,
         "username": "dmtrsflaco",
         "href": ".../users/55884576",
         "description": "Alter ego of @dmtrsslvdr",
-        "permalink_url": "http://soundcloud.com/dmtrsflaco",
+        //...
         "links": {
             "users.tracks": {
                 "type": "tracks",
@@ -233,8 +231,9 @@
                 "type": "tracks",
                 "href": ".../users/55884576/likes"
             }
+            //...
         }
-    }
+    } ]
 }</code></pre>
             </section>
 
